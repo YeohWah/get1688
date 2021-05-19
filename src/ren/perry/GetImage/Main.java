@@ -29,13 +29,6 @@ public class Main {
     }
 
     private static void init() throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("请输入暗号：");
-        String in = br.readLine().replaceAll(" ", "");
-        if (!in.equals("1024")) {
-            System.err.println("你输入的暗号不对哟~  去问问Perry再来吧~  本程序将在3秒后自动退出");
-            exitSystem();
-        } else {
             while (true) {
                 System.out.println("请输入需要爬取图片的网站类型：\n0：退出\n1：1688\n2：淘宝\n3：天猫\n4：京东\n5：淘宝法拍二手房\n6：京东法拍二手房\n7：58法拍二手房");
                 String type = br.readLine().replaceAll(" ", "");
@@ -67,7 +60,6 @@ public class Main {
                         break;
                 }
             }
-        }
     }
 
     /*
